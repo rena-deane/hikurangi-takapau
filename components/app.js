@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 
-class App extends Component {
 
-  constructor (props) {
-    super(props)
-  }
+export default React.createClass({
 
   render () {
-    return <h1>Welcome to {this.props.name}</h1>
+    return (
+        <div>
+            <p>render nav here</p>
+        </div>
+    )
   }
 
-}
-
-export default App
+})
