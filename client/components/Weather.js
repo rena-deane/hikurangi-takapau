@@ -32,11 +32,11 @@ class Weather extends Component {
     }
     render() {
         console.log(this.state)
-        const forecast = this.state.forecast
+        const forecast = this.state.forecast.slice(0, 5)
         console.log(forecast)
         return (
             <div id="weather">
-                <h2>{this.state.title}</h2>
+                <h3>Five-Day Forecast</h3>
                 <div className="show-forecast">
                 {
                     this.state.isFetching ? <img src='../../public/images/triangle.gif' />
