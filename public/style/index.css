@@ -5,6 +5,7 @@ html {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -73,6 +74,24 @@ div#pepeha a {
     justify-content: center;
 }
 
+#weather-today {
+    overflow: hidden;
+    display: inline-flex;
+    width: 60%;
+}
+
+
+.current-weather {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1em;
+    margin: 1em;
+    width: 100%;
+}
+
+img.loading {
+    width: 50px;
+}
+
 .forecast {
     background-color: rgba(255, 255, 255, 0.5);
     display: inline-block;
@@ -81,8 +100,12 @@ div#pepeha a {
     width: 15%;
 }
 
-.forecast p {
-    font-size: 2em;
+p.weather-text {
+    font-size: 1.25em;
+}
+
+p.temp {
+    font-size: 1.25em;
 }
 
 .about-item {
