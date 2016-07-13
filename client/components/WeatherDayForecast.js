@@ -8,9 +8,9 @@ export default (props) => {
             <p>{props.sunrise}</p>
             <h5>Sunset</h5>
             <p>{props.sunset}</p>
-            <h5>High</h5>
+            <h5>High &#8451;</h5>
             <p>{props.high}</p>
-            <h5>Low</h5>
+            <h5>Low &#8451;</h5>
             <p>{props.low}</p>
             <h6>{props.text}</h6>
         </div>
