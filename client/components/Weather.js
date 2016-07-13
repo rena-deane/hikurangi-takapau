@@ -41,7 +41,7 @@ class Weather extends Component {
                 {
                     this.state.isFetching ? <img src='../../public/images/triangle.gif' />
                     : forecast.map( (fore) => {
-                        return <Forecast day={fore.day} date={fore.date} high={fore.high} low={fore.low} sunrise={fore.sunrise} sunset={fore.sunset} />
+                        return <Forecast day={fore.day} date={fore.date} high={fore.high} low={fore.low} sunrise={this.state.sunrise} sunset={this.state.sunset} />
                     })
                 }
                 </div>
