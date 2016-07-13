@@ -5,7 +5,11 @@ class Carvings extends Component {
         super (props)
     }
     render () {
-        return <h1>Te Takapau a Maui</h1>
+        return (
+            <div id='carvings'>
+                <img src='../public/images/01-takapau-a-maui.png'/>
+            </div>
+        )
     }
 }
 

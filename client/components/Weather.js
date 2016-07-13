@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import request from 'superagent'
 import Forecast from './WeatherDayForecast'
+import Current from './WeatherDay'
 
 class Weather extends Component {
     constructor(props){
@@ -22,8 +23,9 @@ class Weather extends Component {
                 this.setState({
                         title: results.results.channel.title,
                         forecast: results.results.channel.item.forecast,
-                        sunrise: results.results.channel.astronomy.sunrise,
-                        sunset: results.results.channel.astronomy.sunset,
+                        wind: results.results.channel.wind,
+                        atmosphere: results.results.channel.atmosphere,
+                        astronomy: results.results.channel.astronomy,
                         isFetching: false
                     })
                 console.log('Im setting the state here', this.state)
@@ -32,16 +34,40 @@ class Weather extends Component {
     }
     render() {
         console.log(this.state)
-        const forecast = this.state.forecast
+        const current = this.state.forecast[0]
+        const forecast = this.state.forecast.slice(1, 6)
         console.log(forecast)
         return (
             <div id="weather">
-                <h2>{this.state.title}</h2>
+                <h3>Current Conditions</h3>
+                {
+                    this.state.isFetching ? <img className='loading' src='../../public/images/triangle.gif' />
+                    : <Current
+                        day={current.day}
+                        date={current.date}
+                        text={current.text}
+                        high={current.high}
+                        low={current.low}
+                        chill={this.state.wind.chill}
+                        direction={this.state.wind.direction}
+                        speed={this.state.wind.speed}
+                        humidity={this.state.atmosphere.humidity}
+                        visibility={this.state.atmosphere.visibility}
+                        sunrise={this.state.astronomy.sunrise}
+                        sunset={this.state.astronomy.sunrise} />
+                }
+                <h3>Five-Day Forecast</h3>
                 <div className="show-forecast">
                 {
-                    this.state.isFetching ? <img src='../../public/images/triangle.gif' />
+                    this.state.isFetching ? <img className='loading' src='../../public/images/triangle.gif' />
                     : forecast.map( (fore, index) => {
-                        return <Forecast key={index} day={fore.day} date={fore.date} high={fore.high} low={fore.low} sunrise={this.state.sunrise} sunset={this.state.sunset} />
+                        return <Forecast
+                                    key={index}
+                                    day={fore.day}
+                                    date={fore.date}
+                                    high={fore.high}
+                                    low={fore.low}
+                                    text={fore.text} />
                     })
                 }
                 </div>
@@ -52,9 +78,5 @@ class Weather extends Component {
 
 export default Weather
 
- // console.log(this.state)
- //        console.log(forecast)
+// <Current day={current.day} date={current.date} text={current.date} high={current.high} low={current.low} chill={this.state.wind.chill} direction={this.state.wind.direction} speed={this.state.wind.speed} humidity={this.state.atmosphere.humidity} visibility={this.state.atmosphere.visibility} sunrise={this.state.astronomy.sunrise} sunset={this.state.astronomy.sunrise} />
 
-// {forecast.map((eachDay) => {
-//                         return <Forecast day={eachDay.day} date={eachDay.date} high={eachDay.high} low={eachDay.low} sunrise={eachDay.sunrise} sunset={eachDay.sunset} />
-//                     })}

@@ -4,11 +4,11 @@ export default (props) => {
     return (
         <div className="forecast">
             <h4 className="weather-date">{props.day} {' '} {props.date}</h4>
-            <h5>High</h5>
-            <p>{props.high}</p>
-            <h5>Low</h5>
-            <p>{props.low}</p>
-            <h6>{props.text}</h6>
+            <p className="weather-text">{props.text}</p>
+            <h5>High &#8451;</h5>
+            <p className="temp">{props.high}</p>
+            <h5>Low &#8451;</h5>
+            <p className="temp">{props.low}</p>
         </div>
     )
 }
