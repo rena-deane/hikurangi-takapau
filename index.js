@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, hashHistory } from 'react-router'
-import App from './components/App'
-import About from './components/About'
-import Carvings from './components/Carvings'
-import Weather from './components/Weather'
+import App from './client/components/App'
+import About from './client/components/About'
+import Carvings from './client/components/Carvings'
+import Weather from './client/components/Weather'
 
 render((
     <Router history={hashHistory}>
