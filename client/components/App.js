@@ -5,14 +5,14 @@ export default React.createClass({
 
   render () {
     return (
-        <div>
+        <div id="content-wrapper">
             <nav className="navbar navbar-default">
                 <div className="container-fluid">
                     <div className="navbar-header">
                         <ul className="nav navbar-nav">
-                            <li><Link to='/about'>About</Link></li>
-                            <li><Link to='/explore'>Explore</Link></li>
-                            <li><Link to='/weather'>Huarere</Link></li>
+                            <li><Link to='/about' activeStyle={{ color: '#b0b9b6'}}>About</Link></li>
+                            <li><Link to='/explore' activeStyle={{ color: '#b0b9b6'}}>Explore</Link></li>
+                            <li><Link to='/weather' activeStyle={{ color: '#b0b9b6'}}>Huarere</Link></li>
                         </ul>
                     </div>
                 </div>

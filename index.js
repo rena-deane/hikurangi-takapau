@@ -10,8 +10,8 @@ import LandingPage from './client/components/LandingPage'
 render((
     <Router history={hashHistory}>
         <Route path="/" component={App}>
-            <Route path="/about" component={About} />
             <Route path="/explore" component={Carvings} />
+            <Route path="/about" component={About} />
             <Route path="/weather" component={Weather} />
         </Route>
     </Router>
