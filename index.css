@@ -58,6 +58,10 @@ ul.nav.navbar-nav li a:hover {
     background-color: #f6f9e8;
 }
 
+#content-wrapper h1 {
+    font-weight: 300;
+}
+
 div#pepeha a {
     margin-top: 2em;
 }
@@ -125,7 +129,7 @@ p.temp {
 
 .about-item {
     margin: 2em auto;
-    width: 50%;
+    width: 60%;
 }
 
 
