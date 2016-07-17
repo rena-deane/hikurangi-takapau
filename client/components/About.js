@@ -10,7 +10,7 @@ export default React.createClass({
                     </p>
                 </div>
                 <div className="about-item">
-                    <h2>Hikurangi Te Toka Tapu</h2>
+                    <h1>HIKURANGI TE TOKA TAPU</h1>
                     <p>
                         Hikurangi is an experience the Iwi (tribe) would like to share with manuhiri (visitors) from around New Zealand and more distant places around the globe. For Guided Te Ara ki Hikurangi four-wheel-drive tours and tramping information our Tourism Ngati Porou office can help.
                     </p>
