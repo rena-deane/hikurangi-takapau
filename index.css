@@ -91,6 +91,9 @@ div#pepeha a {
 
 #show-forecast {
     justify-content: center;
+    overflow: hidden;
+    display: inline-flex;
+    width: 100%;
 }
 
 #weather-today {
@@ -116,7 +119,7 @@ img.loading {
     display: inline-block;
     padding: 1em;
     margin: 1em;
-    width: 15%;
+    width: 20%;
 }
 
 p.weather-text {
