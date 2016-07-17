@@ -7,7 +7,7 @@ class Carvings extends Component {
     render () {
         return (
             <div id='carvings'>
-                <img src='../public/images/01-takapau-a-maui.png'/>
+                <img src='./images/01-takapau-a-maui.png'/>
             </div>
         )
     }
