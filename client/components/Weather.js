@@ -39,7 +39,7 @@ class Weather extends Component {
             <div id="weather">
                 <h3>Current Conditions</h3>
                 {
-                    this.state.isFetching ? <img className='loading' src='../public/images/triangle.gif' />
+                    this.state.isFetching ? <img className='loading' src='./images/triangle.gif' />
                     : <Current
                         day={current.day}
                         date={current.date}
@@ -57,7 +57,7 @@ class Weather extends Component {
                 <h3>Five-Day Forecast</h3>
                 <div id="show-forecast">
                 {
-                    this.state.isFetching ? <img className='loading' src='../public/images/triangle.gif' />
+                    this.state.isFetching ? <img className='loading' src='./images/triangle.gif' />
                     : forecast.map( (fore, index) => {
                         return <Forecast
                                     key={index}
