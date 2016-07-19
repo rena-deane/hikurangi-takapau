@@ -1,15 +1,15 @@
 
-# hikurangi-takapau
+# Te Takapau-a-Maui
 
-Learn about Te Takapau a Maui
+Te Takapau-a-Maui
 
 ## how
 
 ### install
 
 ```
-git clone https://github.com/rena-deane/hikurangi-takapau
-cd hikurangi-takapau
+git clone https://github.com/rena-deane/Te Takapau-a-Maui
+cd 
 npm install
 ```
 

@@ -1,6 +1,6 @@
 var test = require('tape')
 
-test('testing hikurangi-takapau', function (t) {
+test('testing Te Takapau-a-Maui', function (t) {
   t.ok(true)
   t.end()
 })
