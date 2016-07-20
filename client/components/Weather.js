@@ -33,15 +33,13 @@ class Weather extends Component {
             .catch((err) => console.error(err))
     }
     render() {
-        console.log(this.state)
         const current = this.state.forecast[0]
         const forecast = this.state.forecast.slice(1, 6)
-        console.log(forecast)
         return (
             <div id="weather">
                 <h3>Current Conditions</h3>
                 {
-                    this.state.isFetching ? <img className='loading' src='../../public/images/triangle.gif' />
+                    this.state.isFetching ? <img className='loading' src='../public/images/triangle.gif' />
                     : <Current
                         day={current.day}
                         date={current.date}
@@ -57,9 +55,9 @@ class Weather extends Component {
                         sunset={this.state.astronomy.sunrise} />
                 }
                 <h3>Five-Day Forecast</h3>
-                <div className="show-forecast">
+                <div id="show-forecast">
                 {
-                    this.state.isFetching ? <img className='loading' src='../../public/images/triangle.gif' />
+                    this.state.isFetching ? <img className='loading' src='../public/images/triangle.gif' />
                     : forecast.map( (fore, index) => {
                         return <Forecast
                                     key={index}

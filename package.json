@@ -7,7 +7,7 @@
     "start": "budo . -d --serve bundle.js --live",
     "build": "browserify . -o bundle.js -g uglifyify",
     "test": "browserify test/index.js | node | tap-spec",
-    "dist": "mkdir -p dist && bash -c 'cp *.{js,html,css} dist'",
+    "dist": "mkdir -p dist && bash -c 'cp -r *.{js,html,css} public/ dist'",
     "push": "gh-pages -d dist",
     "deploy": "npm run build && npm run dist && npm run push"
   },
@@ -21,7 +21,6 @@
     "url": "https://github.com/rena-deane/hikurangi-takapau"
   },
   "author": "rena-deane",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/rena-deane/hikurangi-takapau/issues"
   },
@@ -43,8 +42,6 @@
     "browserify": "^13.0.0",
     "budo": "^8.2.0",
     "gh-pages": "^0.11.0",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.5.1",
     "uglifyify": "^3.0.1",
