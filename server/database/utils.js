@@ -13,19 +13,21 @@ function getAll (table, callback) {
     })
 }
 
-module.exports = {
-  getAll: getAll
+function findOne (table, params, callback) {
+  knex(table).where(params)
+    .then(function(resp){
+      callback(null, resp[0])
+    })
+    .catch(function(err){
+      callback(err, null)
+    })
 }
 
-    // findOne: function(table, params, callback) {
-    //   knex(table).where(params)
-    //     .then(function(resp){
-    //       callback(null, resp[0])
-    //     })
-    //     .catch(function(err){
-    //       callback(err, null)
-    //     })
-    // },
+module.exports = {
+  getAll: getAll,
+  findOne: findOne
+}
+
 
     // add: function(table, obj, callback) {
     //   knex(table).returning('id').insert(obj)
