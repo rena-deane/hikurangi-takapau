@@ -1,7 +1,7 @@
 
-# hikurangi-takapau
+# Te Takapau-a-Maui
 
-Learn about Te Takapau a Maui
+Learn about Te Takapau a Maui carvings on Hikurangi maunga.
 
 ## Learnings
 - React
